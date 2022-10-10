@@ -1,0 +1,30 @@
+---
+enum LogoSize {
+    DEFAULT = 'DEFAULT',
+    SMALL = 'SMALL',
+    MEDIUM = 'MEDIUM',
+    LARGE = 'LARGE',
+}
+
+const { size } = Astro.props;
+
+const getClassString = (size: LogoSize | string) => {
+    let baseClassString = "font-semibold hover:tracking-widest transition-all duration-300 ease-in-out ";
+    switch (size) {
+        case LogoSize.SMALL:
+            baseClassString += " text-xl";
+            break;
+        case  LogoSize.MEDIUM:
+            baseClassString += "text-2xl";
+            break;
+        case LogoSize.LARGE:
+            baseClassString += "text-4xl";
+            break;
+        default:
+            baseClassString += "text-base";
+            break;
+    }
+    return baseClassString;
+};
+---
+<p class={getClassString(size)} >OrderSlide</p>

@@ -3,15 +3,16 @@ import { generateImage } from "astro-eleventy-img";
 import { Icon } from "astro-icon";
 import Starfield from "~/components/starfield.astro";
 import HeroImage from "~/components/hero-image.astro";
+import OrderslideLogo from "./orderslide-logo.astro";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 
-const { webp, avif, png } = generateImage("src/assets/astronaut.png", {
+const { webp, avif, png } = generateImage("src/assets/boxes.png", {
   widths,
   formats: ["webp", "avif", "png"],
-  outputDir: "public/assets/images/astronaut",
-  urlPath: "/assets/images/astronaut",
+  outputDir: "public/assets/images/boxes",
+  urlPath: "/assets/images/boxes",
 });
 
 const avifSrcset = avif.map(({ srcset }) => srcset).join(",");
@@ -26,15 +27,16 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(",");
   </div>
   <div class="relative grid h-full sm:grid-cols-2 place-items-center">
     <h2
-      class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"
+      class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end mr-8"
     >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
+      <!-- <Icon name="logomark" class="h-24 text-white md:h-32" /> -->
+      <OrderslideLogo size={'LARGE'} />
       <div
         class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
       >
-        Build fast
-        <br /> websites,
-        <br /> faster.
+        Lighting speed
+        <br /> Pick, Pack
+        <br /> and Ship.
       </div>
     </h2>
     <picture

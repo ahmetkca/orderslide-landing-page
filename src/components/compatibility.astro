@@ -2,87 +2,81 @@
 import ContentSection from "~/components/content-section.astro";
 import CompatibilityList from "~/components/compatibility-list.astro";
 
-const frameworks = [
+const shops = [
   {
-    title: "React",
-    icon: "frameworks/react",
-    url: "https://reactjs.org/",
+    title: "Etsy",
+    icon: "shops/etsy",
+    url: "https://www.etsy.com/",
   },
   {
-    title: "Preact",
-    icon: "frameworks/preact",
-    url: "https://preactjs.com/",
+    title: "Shopify",
+    icon: "shops/shopify",
+    url: "https://www.shopify.com/",
   },
   {
-    title: "Svelte",
-    icon: "frameworks/svelte",
-    url: "https://svelte.dev/",
+    title: "Amazon",
+    icon: "shops/amazon",
+    url: "https://www.amazon.com/",
   },
   {
-    title: "Vue",
-    icon: "frameworks/vue",
-    url: "https://vuejs.org/",
+    title: "Ebay",
+    icon: "shops/ebay",
+    url: "https://www.ebay.com/",
   },
   {
-    title: "Solid",
-    icon: "frameworks/solid",
-    url: "https://www.solidjs.com/",
+    title: "BigCommerce",
+    icon: "shops/bigcommerce",
+    url: "https://www.bigcommerce.com/",
   },
-  {
-    title: "Lit",
-    icon: "frameworks/lit",
-    url: "https://lit.dev/",
-  },
+  // {
+  //   title: "Lit",
+  //   icon: "frameworks/lit",
+  //   url: "https://lit.dev/",
+  // },
 ];
 
-const platforms = [
+const couriers = [
   {
-    title: "Netlify",
-    icon: "platforms/netlify",
-    url: "https://www.netlify.com/",
+    title: "UPS",
+    icon: "couriers/ups",
+    url: "https://www.ups.com/ca/en/Home.page?",
   },
   {
-    title: "Vercel",
-    icon: "platforms/vercel",
-    url: "https://vercel.com/",
+    title: "USPS",
+    icon: "couriers/usps",
+    url: "https://www.usps.com/",
   },
   {
-    title: "Cloudflare",
-    icon: "fa-brands:cloudflare",
-    url: "https://pages.cloudflare.com/",
+    title: "FedEx",
+    icon: "couriers/fedex",
+    url: "https://www.fedex.com/en-us/home.html",
   },
   {
-    title: "Render",
-    icon: "platforms/render",
-    url: "https://render.com/",
+    title: "Canada Post",
+    icon: "couriers/canadapost",
+    url: "https://www.canadapost-postescanada.ca/cpc/en?name=tgt",
   },
   {
-    title: "GitHub",
-    icon: "fa-brands:github",
-    url: "https://pages.github.com/",
+    title: "ShipStation",
+    icon: "couriers/shipstation",
+    url: "https://www.shipstation.com/ca/",
   },
-  {
-    title: "GitLab",
-    icon: "fa-brands:gitlab",
-    url: "https://docs.gitlab.com/ee/user/project/pages/",
-  },
+ 
 ];
 ---
 
 <ContentSection title="Compatibility" id="compatibility">
   <Fragment slot="lead">
-    Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
-    <span class="text-primary">framework</span>
-    and deploy to your favorite <span class="text-primary">platform</span>.
+    Connect your stores with one-click to your favorite e-commerce platform.
   </Fragment>
   <CompatibilityList
-    title="Frameworks"
-    data={frameworks}
+    title="Shops"
+    data={shops}
     url="https://docs.astro.build/core-concepts/framework-components/"
   />
   <CompatibilityList
-    title="Platforms"
-    data={platforms}
+    title="Couriers"
+    data={couriers}
     url="https://docs.astro.build/guides/deploy/"
   />
 </ContentSection>

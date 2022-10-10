@@ -1,11 +1,12 @@
 ---
 import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
+import OrderslideLogo from "./orderslide-logo.astro";
 
 const navItems = [
   { title: "Features", url: "#features" },
   { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
+  // { title: "Showcase", url: "#showcase" },
 ];
 ---
 
@@ -13,10 +14,12 @@ const navItems = [
   id="page-header"
   class="absolute bottom-0 z-10 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+  <a class="flex items-center gap-3 hover:!text-default font-orderslidelogo" href="#">
+    <h1 class="sr-only">OrderSlide</h1>
+    <!-- <p class="font-orderslidelogo font- text-2xl">OrderSlide</p> -->
+    <OrderslideLogo size={"SMALL"} />
+    <!-- <Icon name="logomark" class="h-10" />
+    <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
   </a>
   <div>
     <div class="flex items-center gap-6">

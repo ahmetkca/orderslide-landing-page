@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        orderslidelogo: ['"Big Shoulders Text"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: "var(--color-primary)",
